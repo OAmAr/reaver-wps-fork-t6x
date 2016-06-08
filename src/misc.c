@@ -33,6 +33,7 @@
 
 #include "misc.h"
 
+
 /* Converts a raw MAC address to a colon-delimited string */
 unsigned char *mac2str(unsigned char *mac, char delim)
 {
@@ -95,6 +96,12 @@ void cprintf(enum debug_level level, const char *fmt, ...)
     if(level <= get_debug())
     {
         va_start(arg, fmt);
+
+	char buff[100];
+    	time_t now = time (0);
+    	strftime (buff, 100, "%Y-%m-%d %H:%M:%S.000", localtime (&now));
+    	printf ("%s ", buff);
+
         vfprintf(get_log_file(), fmt, arg);
         va_end(arg);
     }

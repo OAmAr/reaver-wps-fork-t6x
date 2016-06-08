@@ -41,6 +41,7 @@
 #include "defs.h"
 #include "init.h"
 #include "globule.h"
+#include <time.h>
 
 unsigned char *mac2str(unsigned char *mac, char delim);
 void str2mac(unsigned char *str, unsigned char *mac);
