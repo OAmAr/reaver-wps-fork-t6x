@@ -267,6 +267,7 @@ void crack()
             {
                 cprintf(WARNING, "[+] Quitting after %d crack attempts\n", pin_attempts);
                 break;
+                exit()
             }
         }
 
